@@ -1,0 +1,27 @@
+<h1>Welcome to CRUD </h1>
+<p>Create,Read,Update,Delete </p>
+
+<h3>CREATE NEW ARTICLES  button</h3>
+
+<form action="http://127.0.0.1:3000/articles/new"  method="GET">
+    <input type="Submit" value="create new"/>
+</form>
+
+
+
+
+Existing Datas:
+
+
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <a href="<%= article_path(article) %>">
+        <%= article.title %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+
